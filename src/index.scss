@@ -1,28 +1,9 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@font-face {
-  font-family: "Inter";
-  src: url('../fonts/static/Inter-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
-/* Inter Bold */
-@font-face {
-  font-family: "Inter";
-  src: url('../fonts/static/Inter-Bold.ttf');
-  font-weight: 700;
-  font-style: normal;
-}
 
-/* Inter Extra Bold */
-@font-face {
-  font-family: "Inter";
-  src: url('../fonts/static/Inter-ExtraBold.ttf');
-  font-weight: 800;
-  font-style: normal;
-}
 
 /* CSS Reset */
 /* Box sizing rules */
@@ -116,11 +97,11 @@ select {
 }
 
 html {
-  font-family: Inter;
+  font-family: 'DM Sans', sans-serif;
 }
 
 body {
-  background-color: #fff;
+  background-color: hsl(27, 66%, 92%);
   padding: 15px;
   
   // for this project only to center the component.
@@ -128,3 +109,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 18px;
+}
+

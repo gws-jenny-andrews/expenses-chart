@@ -1,0 +1,106 @@
+.header {
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 10px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .headerBalanceWrapper {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+
+        .headerTitle {
+            font-size: 1rem;
+        }
+
+        .headerBalance {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.chart {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 40px;
+    height: 220px;
+    place-content: bottom;
+    column-gap: 4%;
+    row-gap: 10px;
+    margin-top: 40px;
+  
+    .amount {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      background-color: hsl(10, 79%, 65%);
+      height: 78%;
+      align-self: end;
+      border-radius: 4px;
+  
+      &:is(:focus, :hover) {
+        background-color: red;
+      }
+      &.current {
+        background-color: hsl(186, 34%, 60%);
+
+        &:is(:focus, :hover) {
+            background-color: blue;
+          }
+      }
+    }
+  
+    .day {
+      display: flex;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #999;
+    }
+  }
+  
+  .spendingSummary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px solid #eee;
+    padding: 22px 0px 8px 0;
+  
+    .thisMonth {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  
+      &>div:nth-child(1) {
+        color: #999; ;
+      }
+      &>div:nth-child(2) {
+        color: #000; 
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+  
+    .change {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      
+      
+      &>div:nth-child(2) {
+        color: #999; ;
+      }
+      &>div:nth-child(1) {
+        color: #000; 
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      
+    }
+  }
