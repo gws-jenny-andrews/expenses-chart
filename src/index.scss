@@ -1,9 +1,12 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 
 /* CSS Reset */
 /* Box sizing rules */
@@ -28,8 +31,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -68,42 +71,39 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-      scroll-behavior: auto;
+    scroll-behavior: auto;
   }
 
   *,
   *::before,
   *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-
 :root {
-  --accent-color: hsl(5, 85%, 63%);
-  --menu-hover-color: hsl(35, 77%, 62%);
-  --off-white: hsl(36, 100%, 99%);
-  --grayish-blue-300: hsl(233, 8%, 79%);
-  /* #A19EA9; */
-  --grayish-blue-600: hsl(236, 13%, 42%);
-  --grayish-blue-800: hsl(240, 100%, 5%);
-  --page-width-large: 1110px;
+  --background-color: hsl(27, 66%, 92%);
+  --accent-color: hsl(10, 79%, 65%);
+  --chart-current-color: hsl(186, 34%, 60%);
+  --chart-main-hover-color: #FF9B87;
+  --chart-current-hover-color: #B4DFE5;
+  
+  --page-width-large: 969px;
   font-size: 15px;
   font-weight: 400;
-
 }
 
 html {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 body {
   background-color: hsl(27, 66%, 92%);
   padding: 15px;
-  
+
   // for this project only to center the component.
   display: flex;
   justify-content: center;
@@ -113,6 +113,11 @@ body {
 .card {
   background-color: #fff;
   border-radius: 10px;
-  padding: 18px;
+  padding: 22px 18px 15px 18px;
 }
 
+@media (min-width: --var(--page-width-large)) {
+  .card {
+    padding: 22px 40px 15px 40px;
+  }
+}

@@ -5,10 +5,11 @@ const Chart = ({ chartData }) => {
   const [highestAmount, setHighestAmount] = useState();
 
   useEffect(() => {
-    // https://stackoverflow.com/a/52916675/3482632
-    const maxAmount = chartData.reduce((p, c) => (p.amount > c.amount ? p : c));
-    setHighestAmount(maxAmount);
-
+    if(chartData.length > 0) {
+      // https://stackoverflow.com/a/52916675/3482632
+      const maxAmount = chartData.reduce((p, c) => (p.amount > c.amount ? p : c));
+      setHighestAmount(maxAmount);
+    }
     return () => {
       setHighestAmount(undefined);
     };
@@ -16,6 +17,12 @@ const Chart = ({ chartData }) => {
 
   return (
     <div className={styles.chart}>
+      { chartData?.length === 0 ? 
+      <div>
+        Loading
+      </div> 
+      : 
+      <>
       {chartData &&
         chartData.map((day, index) => (
           <Fragment key={index}>
@@ -32,6 +39,8 @@ const Chart = ({ chartData }) => {
             <div className="day">{day.day}</div>
           </Fragment>
         ))}
+        </>
+        }
     </div>
   );
 };

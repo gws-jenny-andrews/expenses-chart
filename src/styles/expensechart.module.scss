@@ -1,11 +1,17 @@
+.wrapper {
+  width: 540px;
+  max-width: 100vw;
+  padding: 15px;
+}
+
 .header {
-    background-color: hsl(10, 79%, 65%);
+    background-color: var(--accent-color);
     border-radius: 10px;
     padding: 20px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     .headerBalanceWrapper {
         display: flex;
@@ -28,29 +34,29 @@
     grid-auto-flow: column;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr 40px;
-    height: 220px;
+    height: 200px;
     place-content: bottom;
     column-gap: 4%;
     row-gap: 10px;
-    margin-top: 40px;
+    margin-top: 52px;
   
     .amount {
       display: flex;
       justify-content: center;
       align-items: end;
-      background-color: hsl(10, 79%, 65%);
+      background-color:var(--accent-color);
       height: 78%;
       align-self: end;
       border-radius: 4px;
   
       &:is(:focus, :hover) {
-        background-color: red;
+        background-color: var(--chart-main-hover-color);
       }
       &.current {
-        background-color: hsl(186, 34%, 60%);
+        background-color: var(--chart-current-color);
 
         &:is(:focus, :hover) {
-            background-color: blue;
+            background-color: var(--chart-current-hover-color);
           }
       }
     }
@@ -104,3 +110,6 @@
       
     }
   }
+
+
+  
